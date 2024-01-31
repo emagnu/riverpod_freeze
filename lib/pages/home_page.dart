@@ -3,6 +3,9 @@
 import 'package:flutter/material.dart';
 //  Import FILES
 import '../widgets/custom_button.dart';
+import 'collection_page.dart';
+import 'method_page.dart';
+import 'mutable_person_page.dart';
 import 'person_page.dart';
 //  PARTS
 //  FREEZE
@@ -29,17 +32,22 @@ class HomePage extends StatelessWidget {
               style: TextStyle(fontSize: 30.0),
             ),
             SizedBox(height: 20.0),
-
             CustomButton(
               title: 'Persons',
-              // route: '/persons',
               child: PersonPage(),
             ),
-            // CustomButton(
-            //   title: 'Counter',
-            //   route: '/counter',
-            //   child: CounterPage(),
-            // ),
+            CustomButton(
+              title: 'Mutable Person',
+              child: MutablePersonPage(),
+            ),
+            CustomButton(
+              title: 'Collection',
+              child: CollectionPage(),
+            ),
+            CustomButton(
+              title: 'Method',
+              child: MethodPage(),
+            ),
           ],
         ),
       ),

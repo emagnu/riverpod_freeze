@@ -10,6 +10,7 @@ part 'person.freezed.dart';
 //  PROVIDERS
 //  //  //
 
+//NB @freeze means: All FIELDS are IMMUTABLE
 @freezed
 class Person with _$Person {
   const factory Person({
