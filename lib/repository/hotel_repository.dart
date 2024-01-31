@@ -1,6 +1,6 @@
 //   //
 //  Import LIBRARIES
-import 'package:flutter/material.dart';
+import 'dart:convert';
 //  Import FILES
 import '../models/hotel.dart';
 //  PARTS
@@ -70,7 +70,9 @@ Future<List<Hotel>> fetchHotel() async {
   final List HotelList = jsonDecode(jsonData);
   final List<Hotel> hotels = [];
 
-  final hotels = [for (var hotel in HotelList) Hotel.fromJson(hotel)];
+  final List<Hotel> hotels = [
+    for (var hotel in HotelList) Hotel.fromJson(hotel)
+  ];
   print(hotels[0]);
 
   return hotels;
